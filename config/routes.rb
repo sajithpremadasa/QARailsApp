@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  resources :answers
+  resources :questions
+  
+  root 'home#index'
+  
+  get '/about' => 'home#about'
+  
+end 
+
+  # post '/answers' => 'home#temp'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +65,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
